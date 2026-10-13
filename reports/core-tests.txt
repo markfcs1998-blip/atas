@@ -1,0 +1,53 @@
+PASS long continuation requires warm trend, pullback, then closed full-range break
+PASS short continuation mirrors long price and flow rules
+PASS price-only mode explicitly accepts missing order flow
+PASS required flow rejects missing bid ask data
+PASS higher EMAs wait for a fully closed aligned five-minute group
+PASS minute duplicate preserves first closed snapshot
+PASS gap resets trend and blocks old setup
+PASS reset clears all exposed EMA state
+PASS ATR warmup longer than higher warmup remains quiet
+PASS incomplete first five-minute group is discarded
+PASS higher trend warmup needs twenty-one complete groups
+PASS invalid bar and nonminute timestamp reset state
+PASS changed duplicate confirmation cannot repaint a prior candidate
+PASS historical prefix and complete sequence emit identical confirmation
+PASS confirmation must close beyond entire pullback range
+PASS wide confirmation does not use its own range to inflate ATR
+PASS confirmation must close in directional thirty-five percent zone
+PASS confirmation candle extreme is included in structural stop
+PASS pullback remains valid through fifth subsequent candle only
+PASS flow requires aligned delta even when relative volume is strong
+PASS flow evidence threshold counts actual independent flags
+PASS relative volume uses twenty prior positive volumes
+PASS delta improvement requires actual prior bid ask data
+PASS extreme aggression uses directional volume and dominance
+PASS trend without qualifying preceding impulse cannot arm
+PASS pullback must touch fast EMA band before confirming
+PASS close through slow EMA cancels armed setup
+PASS three full bars intervene between confirmed candidates
+PASS options reject valuation for micro NQ and nonquarter tick
+PASS options validate periods counts ranges and flow thresholds
+PASS default next-open long plan has one adverse slippage tick
+PASS short plan rounds and slips entry adversely
+PASS long entry rounds upward before adding configured slippage
+PASS fees and stop slippage are included in net plan math
+PASS gap exceeding max planned loss rejects plan
+PASS entry at wrong side of structural stop rejects plan
+PASS planner rejects missing or delayed successor
+PASS planner rejects insufficient primary net reward risk
+PASS planner validates monetary limits
+PASS planned risk accepts exactly cap but rejects one extra tick
+PASS primary net reward risk includes fees and rounded actual reward
+PASS planner rejects off-grid structural stops
+PASS target is evaluated when the entry candle closes
+PASS both stop and primary target are conservative stop first
+PASS stop gap uses adverse open plus stop slippage
+PASS short stop gap mirrors long gap
+PASS timeout follows fifteen closed entry and later candles
+PASS tracker terminal result is emitted once
+PASS tracker invalid or gapped data remains unresolved permanently
+PASS tracker duplicate does not count twice toward timeout
+PASS target ignores favorable open gap and fills fixed target
+PASS tracker subtracts round trip fees once on target and timeout
+52/52 tests passed

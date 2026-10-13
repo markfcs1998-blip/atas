@@ -1,8 +1,12 @@
-PASS forming confirmation stays invisible until the next bar
-PASS history and recalculation never send alerts
-PASS a session boundary cancels a pending setup
-PASS changing a signal setting requests recalculation
-PASS missing instrument tick size does not fabricate signals
-PASS new-session successor blocks late confirmation delivery
-PASS gap successor blocks late confirmation delivery
-7/7 adapter unit tests passed (test doubles; no ATAS runtime).
+PASS closed confirmation waits for successor and sends one alert
+PASS entry, stop and dollar targets agree with one NQ contract
+PASS forming HLC changes do not alter a confirmed signal
+PASS processing entry candle retains its arrow and ends touched guides
+PASS history and recalculation suppress alerts and clear stale signals
+PASS successor gap rejects late entry
+PASS successor session boundary rejects prior-session entry
+PASS next open beyond risk cap rejects entry
+PASS MNQ cannot use full NQ dollar presets
+PASS settings change requests recalculation
+PASS invalid zero-price closed candle drops active guides
+RESULT: 11/11 adapter tests passed (explicit doubles, no real ATAS runtime).

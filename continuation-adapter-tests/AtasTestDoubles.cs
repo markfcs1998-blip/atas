@@ -8,12 +8,16 @@ namespace System.Windows.Media
         public static Color OrangeRed => new("OrangeRed");
         public static Color White => new("White");
         public static Color Black => new("Black");
+        public static Color Gold => new("Gold");
+        public static Color Gray => new("Gray");
+        public static Color DodgerBlue => new("DodgerBlue");
+        public static Color MediumPurple => new("MediumPurple");
     }
 }
 
 namespace ATAS.Indicators
 {
-    public enum VisualMode { UpArrow, DownArrow, Hide }
+    public enum VisualMode { UpArrow, DownArrow, Hide, Hash, Line }
     public sealed class ValueDataSeries(string id, string name)
     {
         private readonly Dictionary<int, decimal> _values = [];
@@ -25,6 +29,7 @@ namespace ATAS.Indicators
         public bool ShowZeroValue { get; set; }
         public bool ShowCurrentValue { get; set; }
         public bool IsHidden { get; set; }
+        public bool ScaleIt { get; set; }
         public decimal this[int bar]
         {
             get => _values.GetValueOrDefault(bar);

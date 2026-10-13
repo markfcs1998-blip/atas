@@ -5,9 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../PivotReversalEngine.cs" Link="PivotReversalEngine.cs" />
+    <Compile Remove="tests/**/*.cs" />
+    <Compile Include="../NqContinuationEngine.cs" Link="NqContinuationEngine.cs" />
+    <Compile Include="../NqTradePlanning.cs" Link="NqTradePlanning.cs" />
   </ItemGroup>
 </Project>

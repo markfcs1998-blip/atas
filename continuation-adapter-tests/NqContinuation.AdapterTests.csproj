@@ -6,7 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../PivotReversalEngine.cs" Link="PivotReversalEngine.cs" Condition="Exists('../PivotReversalEngine.cs')" />
-    <Compile Include="../PivotReversal.cs" Link="PivotReversal.cs" />
+    <Compile Include="../NqContinuationEngine.cs" Link="NqContinuationEngine.cs" />
+    <Compile Include="../NqTradePlanning.cs" Link="NqTradePlanning.cs" />
+    <Compile Include="../NqContinuation.cs" Link="NqContinuation.cs" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,9 @@
-bin/
-obj/
-tests/bin/
-tests/obj/
-adapter-tests/bin/
-adapter-tests/obj/
-PivotReversal-source.zip
+**/bin/
+**/obj/
+data/
+private-reports/
+reports/*.csv
+reports/*.json
+*.zip
+*.user
+CONTINUATION_PLAN.md
