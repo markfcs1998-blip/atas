@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../PivotReversalEngine.cs" Link="PivotReversalEngine.cs" Condition="Exists('../PivotReversalEngine.cs')" />
+    <Compile Include="../PivotReversal.cs" Link="PivotReversal.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,2 @@
+Chart: independently checked 30 signals against original OHLC, pivot timing, sweep, follow-through, invalidation, stop and availability.
+Chart5m: independently checked 32 signals against original OHLC, pivot timing, sweep, follow-through, invalidation, stop and availability.

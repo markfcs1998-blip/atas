@@ -1,0 +1,7 @@
+bin/
+obj/
+tests/bin/
+tests/obj/
+adapter-tests/bin/
+adapter-tests/obj/
+PivotReversal-source.zip

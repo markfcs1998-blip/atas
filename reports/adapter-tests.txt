@@ -1,0 +1,8 @@
+PASS forming confirmation stays invisible until the next bar
+PASS history and recalculation never send alerts
+PASS a session boundary cancels a pending setup
+PASS changing a signal setting requests recalculation
+PASS missing instrument tick size does not fabricate signals
+PASS new-session successor blocks late confirmation delivery
+PASS gap successor blocks late confirmation delivery
+7/7 adapter unit tests passed (test doubles; no ATAS runtime).

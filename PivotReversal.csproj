@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AtasTargetFramework Condition="'$(AtasTargetFramework)' == ''">net10.0-windows</AtasTargetFramework>
+    <TargetFramework>$(AtasTargetFramework)</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AssemblyName>PivotReversal</AssemblyName>
+    <RootNamespace>PivotReversal</RootNamespace>
+    <AtasPath Condition="'$(AtasPath)' == ''">C:\Program Files (x86)\ATAS Platform</AtasPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PivotReversalEngine.cs" />
+    <Compile Include="PivotReversal.cs" />
+    <Reference Include="ATAS.Indicators">
+      <HintPath>$(AtasPath)\ATAS.Indicators.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ATAS.DataFeedsCore">
+      <HintPath>$(AtasPath)\ATAS.DataFeedsCore.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="OFT.Rendering">
+      <HintPath>$(AtasPath)\OFT.Rendering.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Utils.Common">
+      <HintPath>$(AtasPath)\Utils.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckAtasReference" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(AtasPath)\ATAS.Indicators.dll')"
+           Text="Set AtasPath to the installed classic ATAS folder containing ATAS.Indicators.dll. This package does not contain vendor assemblies." />
+  </Target>
+</Project>

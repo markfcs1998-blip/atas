@@ -1,0 +1,41 @@
+PASS long sweep confirms only on follow-through bar
+PASS short behavior mirrors long prices and flow
+PASS confirmation body must point in its direction
+PASS one full tick is required on sweep and reclaim
+PASS one full tick is required above setup for confirmation
+PASS pivot requires all right-hand candles before setup
+PASS swept unconfirmed candidate never becomes a reference swing
+PASS equal lows and equal highs are not confirmed pivots
+PASS setup wick and closing position reject weak candles
+PASS range filter uses only previous true ranges
+PASS ATR warmup blocks setups until full history
+PASS third following bar can confirm
+PASS fourth following bar cannot confirm expired setup
+PASS touching setup extreme invalidates pending setup
+PASS one direction's signal still invalidates the opposite setup
+PASS new valid setup replaces older in its direction
+PASS three full intervening candles enforce cooldown
+PASS default order flow blocks missing bid and ask
+PASS default order flow blocks zero candle volume
+PASS present flow with no evidence is rejected
+PASS relative-volume evidence is independent
+PASS opposing-delta evidence is independent
+PASS running-delta recovery evidence is independent
+PASS extreme aggression evidence is independent
+PASS evidence threshold counts independent flags
+PASS missing running extrema do not invent recovery
+PASS prior volume mean excludes setup candle
+PASS reset clears pending setup and confirmed swings
+PASS nonconsecutive indices isolate history
+PASS large time gaps isolate history
+PASS nonincreasing timestamps isolate history
+PASS invalid OHLC clears state and emits no signal
+PASS negative volume clears state
+PASS duplicate indices emit no duplicate or changed signal
+PASS price-only mode needs no order-flow fields
+PASS all signal prefixes are stable under future append
+PASS rolling history supports long deterministic replay
+PASS invalid options fail at construction
+Replay parser: 69 assertions passed.
+PASS CSV parsing and replay boundary behavior
+RESULT: 39 passed; 0 failed
